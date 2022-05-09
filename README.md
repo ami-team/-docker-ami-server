@@ -80,15 +80,15 @@ Environment variables
 Volume
 ======
 
-Task scripts/programs must be located there: `/AMITaskServer/workspace`.
+Task scripts/programs must be located there: `/AMI/config/`.
 
 Developers
 ==========
 
 * [Jérôme ODIER](https://annuaire.in2p3.fr/4121-4467/jerome-odier) ([CNRS/LPSC](http://lpsc.in2p3.fr/))
 
-[Build Status]:https://github.com/ami-team/docker-ami-task-server/actions/workflows/docker-image.yml
-[Build Status img]:https://github.com/ami-team/docker-ami-task-server/actions/workflows/docker-image.yml/badge.svg?branch=master
+[Build Status]:https://github.com/ami-team/docker-ami-server/actions/workflows/docker-image.yml
+[Build Status img]:https://github.com/ami-team/docker-ami-server/actions/workflows/docker-image.yml/badge.svg?branch=master
 
 [License]:http://www.cecill.info/licences/Licence_CeCILL_V2.1-en.txt
 [License img]:https://img.shields.io/badge/license-CeCILL-blue.svg
