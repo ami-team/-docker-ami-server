@@ -80,7 +80,7 @@ Environment variables
 Volume
 ======
 
-Task scripts/programs must be located there: `/AMI/config/`.
+Configuration is there: `/AMI/config/`.
 
 Developers
 ==========
