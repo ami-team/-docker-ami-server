@@ -72,7 +72,7 @@ Configuration catalog:
 * `ROUTER_PASS`
 
 Time zone:
-* `TIME_ZONE`
+* `TIME_ZONE`<sup>opt</opt>
 
 Class path:
 * `CLASS_PATH`<sup>opt</opt>
