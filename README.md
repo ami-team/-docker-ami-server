@@ -32,22 +32,22 @@ Environment variables
 =====================
 
 Java:
-* `JAVA_MS`<sup>opt</opt>
-* `JAVA_MX`<sup>opt</opt>
-* `JAVA_SS`<sup>opt</opt>
+* `JAVA_MS`<sup>opt, default: 2G</opt>
+* `JAVA_MX`<sup>opt, default: 4G</opt>
+* `JAVA_SS`<sup>opt, default: 20m</opt>
 
 HTTP:
-* `HTTP_TIMEOUT`<sup>opt</opt>
-* `HTTP_MAX_THREADS`<sup>opt</opt>
-* `HTTP_PACKET_SIZE`<sup>opt</opt>
+* `HTTP_TIMEOUT`<sup>opt, default: 20000</opt>
+* `HTTP_MAX_THREADS`<sup>opt, default: 200</opt>
+* `HTTP_PACKET_SIZE`<sup>opt, default: 8192</opt>
 
 AJP:
 * `AJP_ADDRESS`
 * `AJP_SECRET`
 
-* `AJP_TIMEOUT`<sup>opt</opt>
-* `AJP_MAX_THREADS`<sup>opt</opt>
-* `AJP_PACKET_SIZE`<sup>opt</opt>
+* `AJP_TIMEOUT`<sup>opt, default: 20000</opt>
+* `AJP_MAX_THREADS`<sup>opt, default: 200</opt>
+* `AJP_PACKET_SIZE`<sup>opt, default: 8192</opt>
 
 JVM route:
 * `JVM_ROUTE`
@@ -62,20 +62,20 @@ Admin user:
 
 Security:
 * `ENCRYPTION_KEY`
-* `AUTHORIZED_IPS`<sup>opt</opt>
+* `AUTHORIZED_IPS`<sup>opt, default: <i>empty</i></opt>
 
 Config. DB:
 * `ROUTER_CATALOG`
-* `ROUTER_SCHEMA`<sup>opt</opt>
+* `ROUTER_SCHEMA`<sup>opt, default: <i>@NULL</i></opt>
 * `ROUTER_URL`
 * `ROUTER_USER`
 * `ROUTER_PASS`
 
 Time zone:
-* `TIME_ZONE`<sup>opt</opt>
+* `TIME_ZONE`<sup>opt, default: UTC</opt>
 
 Class path:
-* `CLASS_PATH`<sup>opt</opt>
+* `CLASS_PATH`<sup>opt, default: <i>empty</i></opt>
 
 Volume
 ======
