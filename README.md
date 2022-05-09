@@ -31,50 +31,50 @@ This is the official Docker image.
 Environment variables
 =====================
 
+Java:
 * `JAVA_MS`<sup>opt</opt>
 * `JAVA_MX`<sup>opt</opt>
 * `JAVA_SS`<sup>opt</opt>
 
-
+HTTP:
 * `HTTP_TIMEOUT`<sup>opt</opt>
 * `HTTP_MAX_THREADS`<sup>opt</opt>
 * `HTTP_PACKET_SIZE`<sup>opt</opt>
 
-
+AJP:
 * `AJP_ADDRESS`
 * `AJP_SECRET`
-
 
 * `AJP_TIMEOUT`<sup>opt</opt>
 * `AJP_MAX_THREADS`<sup>opt</opt>
 * `AJP_PACKET_SIZE`<sup>opt</opt>
 
-
+JVM route:
 * `JVM_ROUTE`
 
-
+AMI:
 * `BASE_URL`
 
-
+Admin user:
 * `ADMIN_USER`
 * `ADMIN_PASS`
 * `ADMIN_EMAIL`
 
-
+Security:
 * `ENCRYPTION_KEY`
 * `AUTHORIZED_IPS`<sup>opt</opt>
 
-
+Configuration catalog:
 * `ROUTER_CATALOG`
 * `ROUTER_SCHEMA`<sup>opt</opt>
 * `ROUTER_URL`
 * `ROUTER_USER`
 * `ROUTER_PASS`
 
-
+Time zone:
 * `TIME_ZONE`
 
-
+Class path:
 * `CLASS_PATH`<sup>opt</opt>
 
 Volume
