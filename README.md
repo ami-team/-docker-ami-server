@@ -64,7 +64,7 @@ Security:
 * `ENCRYPTION_KEY`
 * `AUTHORIZED_IPS`<sup>opt</opt>
 
-Configuration catalog:
+Configuration DB:
 * `ROUTER_CATALOG`
 * `ROUTER_SCHEMA`<sup>opt</opt>
 * `ROUTER_URL`
