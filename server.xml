@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Server port="8005" shutdown="SHUTDOWN">
+
+    <Listener className="org.apache.catalina.startup.VersionLoggerListener" />
+    <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" />
+    <Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener" />
+    <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
+
+    <Service name="Catalina">
+
+        <!--*********************************************************************************************************-->
+
+        <Connector port="8080"
+                   redirectPort="8443"
+                   protocol="HTTP/1.1"
+                   URIEncoding="UTF-8"
+                   connectionTimeout="${tomcat.http_timeout}"
+                   maxThreads="${tomcat.http_max_threads}"
+                   packetSize="${tomcat.http_packet_size}" />
+
+        <Connector port="8009"
+                   redirectPort="8443"
+                   protocol="AJP/1.3"
+                   URIEncoding="UTF-8"
+                   address="${tomcat.ajp_address}"
+                   secret="${tomcat.ajp_secret}"
+                   secretRequired="true"
+                   allowedRequestAttributesPattern=".*"
+                   connectionTimeout="${tomcat.ajp_timeout}"
+                   maxThreads="${tomcat.ajp_max_threads}"
+                   packetSize="${tomcat.ajp_packet_size}" />
+
+        <!--*********************************************************************************************************-->
+
+        <Engine name="Catalina"
+                defaultHost="localhost"
+                jvmRoute="${tomcat.jvm_route}">
+
+            <Host name="localhost"
+                  appBase="apps"
+                  unpackWARs="true"
+                  autoDeploy="true">
+
+                <Valve className="org.apache.catalina.valves.AccessLogValve"
+                       directory="logs"
+                       prefix="localhost_access_log"
+                       suffix=".txt"
+                       pattern="%h %l %u %t &quot;%r&quot; %s %b" />
+
+            </Host>
+
+        </Engine>
+
+        <!--*********************************************************************************************************-->
+
+    </Service>
+
+</Server>
