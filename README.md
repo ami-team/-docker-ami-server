@@ -52,6 +52,8 @@ AJP:
 JVM route:
 * `JVM_ROUTE`
 
+Identifier which must be used in load balancing scenarios to enable session affinity.
+
 AMI:
 * `BASE_URL`
 
