@@ -60,13 +60,12 @@ RUN wget -qO- https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.62/bin/apache-tomcat
 RUN ["mkdir", "/AMI/apps"]
 RUN ["mkdir", "/AMI/bin" ]
 RUN ["mkdir", "/AMI/conf"]
-RUN ["mkdir", "/AMI/logs"]
 RUN ["mkdir", "/AMI/temp"]
 RUN ["mkdir", "/AMI/work"]
 
 ########################################################################################################################
 
-RUN ["chmod", "777", "/AMI/logs", "/AMI/temp", "/AMI/work"]
+RUN ["chmod", "777", "/AMI/temp", "/AMI/work"]
 
 ########################################################################################################################
 
