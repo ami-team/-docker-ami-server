@@ -66,6 +66,10 @@ RUN ["mkdir", "/AMI/work"]
 
 ########################################################################################################################
 
+RUN ["chmod", "777", "/AMI/logs", "/AMI/temp", "/AMI/work"]
+
+########################################################################################################################
+
 RUN ["wget", "-O", "/AMI/apps/AMI.war", "https://ami.in2p3.fr/download/AMICoreWeb-1.0.0.war"]
 
 ########################################################################################################################
@@ -78,7 +82,6 @@ RUN ["mv", "/tomcat/bin/tomcat-juli.jar", "/AMI/bin/"]
 RUN ["mv", "/tomcat/conf/catalina.policy", "/AMI/conf/"]
 RUN ["mv", "/tomcat/conf/catalina.properties", "/AMI/conf/"]
 RUN ["mv", "/tomcat/conf/context.xml", "/AMI/conf/"]
-RUN ["mv", "/tomcat/conf/logging.properties", "/AMI/conf/"]
 RUN ["mv", "/tomcat/conf/web.xml", "/AMI/conf/"]
 
 RUN ["mv", "/tomcat/lib/", "/AMI/lib/"]
@@ -92,6 +95,7 @@ RUN ["rm", "-fr", "/tomcat/"]
 COPY bin/setenv.sh /AMI/bin/
 COPY conf/AMI.xml /AMI/conf/
 COPY conf/server.xml /AMI/conf/
+COPY conf/logging.properties /AMI/conf/
 
 ########################################################################################################################
 

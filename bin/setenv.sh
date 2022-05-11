@@ -47,7 +47,7 @@ CATALINA_OPTS="\
 \
 -Dami.time_zone='${TIME_ZONE}' \
 \
-Dami.class_path='${CLASS_PATH}' \
+-Dami.class_path='${CLASS_PATH}' \
 \
 -Djava.security.egd=file:/dev/./urandom"
 
