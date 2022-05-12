@@ -28,8 +28,6 @@ Blablabla. It was originally developed for the A Toroidal LHC ApparatuS (ATLAS) 
 
 This is the official Docker image.
 
-This is the official Docker image.
-
 Environment variables
 =====================
 
