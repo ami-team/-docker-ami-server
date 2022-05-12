@@ -1,14 +1,5 @@
 ########################################################################################################################
 
-if [ -z "${BASE_URL}" ] || [ -z "${ADMIN_USER}" ] || [ -z "${ADMIN_PASS}" ] || [ -z "${ADMIN_EMAIL}" ] || [ -z "${ENCRYPTION_KEY}" ] || [ -z "${AUTHORIZED_IPS}" ] || [ -z "${ROUTER_CATALOG}" ] || [ -z "${ROUTER_SCHEMA}" ] || [ -z "${ROUTER_URL}" ] || [ -z "${ROUTER_USER}" ] || [ -z "${ROUTER_PASS}" ] || [ -z "${TIME_ZONE}" ]
-then
-  echo 'Please specify environment variables: BASE_URL, ADMIN_USER, ADMIN_PASS, ADMIN_EMAIL, ENCRYPTION_KEY, AUTHORIZED_IPS, ROUTER_CATALOG, ROUTER_SCHEMA, ROUTER_URL, ROUTER_USER, ROUTER_PASS, TIME_ZONE'
-
-  exit 1
-fi
-
-########################################################################################################################
-
 JAVA_OPTS='-server -Djava.security.egd=file:/dev/./urandom'
 
 ########################################################################################################################
