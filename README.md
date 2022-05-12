@@ -24,7 +24,9 @@
 AMIServer Docker Image
 ======================
 
-Blablabla
+Blablabla. It was originally developed for the A Toroidal LHC ApparatuS (ATLAS) experiment, one of the two general-purpose detectors at the Large Hadron Collider (LHC).
+
+This is the official Docker image.
 
 This is the official Docker image.
 
