@@ -66,7 +66,7 @@ Security:
 
 Config. DB:
 * `ROUTER_CATALOG`
-* `ROUTER_SCHEMA`<sup>opt, default: <i>@NULL</i></opt>
+* `ROUTER_SCHEMA`<sup>opt, default: <i>empty</i></opt>
 * `ROUTER_URL`
 * `ROUTER_USER`
 * `ROUTER_PASS`
