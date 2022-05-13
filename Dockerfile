@@ -48,26 +48,26 @@ ENV CLASS_PATH="/AMI/cmd/"
 
 ########################################################################################################################
 
-RUN ["mkdir", "/AMI"]
-RUN ["mkdir", "/tomcat"]
+RUN ["mkdir", "/AMI/"]
+RUN ["mkdir", "/tomcat/"]
 
 ########################################################################################################################
 
-RUN wget -qO- https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.62/bin/apache-tomcat-9.0.62.tar.gz | tar xz -C /tomcat --strip-components 1
+RUN wget -qO- https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.62/bin/apache-tomcat-9.0.62.tar.gz | tar xz -C /tomcat/ --strip-components 1
 
 ########################################################################################################################
 
-RUN ["mkdir", "/AMI/app"]
-RUN ["mkdir", "/AMI/bin"]
-RUN ["mkdir", "/AMI/cmd"]
-RUN ["mkdir", "/AMI/conf"]
-RUN ["mkdir", "/AMI/font"]
-RUN ["mkdir", "/AMI/temp"]
-RUN ["mkdir", "/AMI/work"]
+RUN ["mkdir", "/AMI/app/"]
+RUN ["mkdir", "/AMI/bin/"]
+RUN ["mkdir", "/AMI/cmd/"]
+RUN ["mkdir", "/AMI/conf/"]
+RUN ["mkdir", "/AMI/font/"]
+RUN ["mkdir", "/AMI/temp/"]
+RUN ["mkdir", "/AMI/work/"]
 
 ########################################################################################################################
 
-RUN ["chmod", "777", "/AMI/temp", "/AMI/work"]
+RUN ["chmod", "777", "/AMI/temp/", "/AMI/work/"]
 
 ########################################################################################################################
 
