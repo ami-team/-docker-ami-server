@@ -75,7 +75,7 @@ Time zone:
 * `TIME_ZONE`<sup>opt, default: UTC</opt>
 
 Class path:
-* `CLASS_PATH`<sup>opt, default: /AMI/cmds/</opt>
+* `CLASS_PATH`<sup>opt, default: /AMI/cmd/</opt>
 
 Volume
 ======

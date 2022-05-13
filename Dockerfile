@@ -44,7 +44,7 @@ ENV ROUTER_PASS=""
 
 ENV TIME_ZONE="UTC"
 
-ENV CLASS_PATH="/AMI/cmds/"
+ENV CLASS_PATH="/AMI/cmd/"
 
 ########################################################################################################################
 
@@ -57,10 +57,11 @@ RUN wget -qO- https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.62/bin/apache-tomcat
 
 ########################################################################################################################
 
-RUN ["mkdir", "/AMI/apps"]
-RUN ["mkdir", "/AMI/bin" ]
-RUN ["mkdir", "/AMI/cmds"]
+RUN ["mkdir", "/AMI/app"]
+RUN ["mkdir", "/AMI/bin"]
+RUN ["mkdir", "/AMI/cmd"]
 RUN ["mkdir", "/AMI/conf"]
+RUN ["mkdir", "/AMI/font"]
 RUN ["mkdir", "/AMI/temp"]
 RUN ["mkdir", "/AMI/work"]
 
@@ -70,7 +71,7 @@ RUN ["chmod", "777", "/AMI/temp", "/AMI/work"]
 
 ########################################################################################################################
 
-RUN ["wget", "-O", "/AMI/apps/AMI.war", "https://ami.in2p3.fr/download/AMICoreWeb-1.0.0.war"]
+RUN ["wget", "-O", "/AMI/app/AMI.war", "https://ami.in2p3.fr/download/AMICoreWeb-1.0.0.war"]
 
 ########################################################################################################################
 
@@ -96,6 +97,7 @@ COPY bin/setenv.sh /AMI/bin/
 COPY conf/AMI.xml /AMI/conf/
 COPY conf/server.xml /AMI/conf/
 COPY conf/logging.properties /AMI/conf/
+COPY conf/Serif.ttf /AMI/font/
 
 ########################################################################################################################
 

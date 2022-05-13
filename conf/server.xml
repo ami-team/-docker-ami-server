@@ -37,7 +37,7 @@
                 jvmRoute="${tomcat.jvm_route}">
 
             <Host name="localhost"
-                  appBase="apps"
+                  appBase="app"
                   unpackWARs="true"
                   autoDeploy="true">
 <!--

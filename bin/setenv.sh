@@ -9,7 +9,7 @@ CATALINA_OPTS="\
 -Xmx${JAVA_MX} \
 -Xss${JAVA_SS} \
 \
--Djava.awt.headless=true \
+-Djava.awt.headless=true -Dsun.java2d.fontpath=/usr/Java/<Java_Home_Folder>/lib/fonts \
 \
 -Dtomcat.http_timeout='${HTTP_TIMEOUT}' \
 -Dtomcat.http_max_threads='${HTTP_MAX_THREADS}' \
