@@ -97,7 +97,7 @@ COPY bin/setenv.sh /AMI/bin/
 COPY conf/AMI.xml /AMI/conf/
 COPY conf/server.xml /AMI/conf/
 COPY conf/logging.properties /AMI/conf/
-COPY conf/Serif.ttf /AMI/font/
+COPY font/Serif.ttf /AMI/font/
 
 ########################################################################################################################
 
