@@ -9,6 +9,8 @@ CATALINA_OPTS="\
 -Xmx${JAVA_MX} \
 -Xss${JAVA_SS} \
 \
+-Djava.awt.headless=true \
+\
 -Dtomcat.http_timeout='${HTTP_TIMEOUT}' \
 -Dtomcat.http_max_threads='${HTTP_MAX_THREADS}' \
 -Dtomcat.http_packet_size='${HTTP_PACKET_SIZE}' \
