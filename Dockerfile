@@ -44,7 +44,7 @@ ENV ROUTER_PASS=""
 
 ENV TIME_ZONE="UTC"
 
-ENV CLASS_PATH=""
+ENV CLASS_PATH="/AMI/cmds/"
 
 ########################################################################################################################
 
@@ -59,6 +59,7 @@ RUN wget -qO- https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.62/bin/apache-tomcat
 
 RUN ["mkdir", "/AMI/apps"]
 RUN ["mkdir", "/AMI/bin" ]
+RUN ["mkdir", "/AMI/cmds"]
 RUN ["mkdir", "/AMI/conf"]
 RUN ["mkdir", "/AMI/temp"]
 RUN ["mkdir", "/AMI/work"]
@@ -103,7 +104,7 @@ EXPOSE 8009
 
 ########################################################################################################################
 
-VOLUME /AMI/conf/
+VOLUME /AMI/cmds
 
 ########################################################################################################################
 
