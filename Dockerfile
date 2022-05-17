@@ -61,7 +61,6 @@ RUN ["mkdir", "/AMI/app/"]
 RUN ["mkdir", "/AMI/bin/"]
 RUN ["mkdir", "/AMI/cmd/"]
 RUN ["mkdir", "/AMI/conf/"]
-RUN ["mkdir", "/AMI/font/"]
 RUN ["mkdir", "/AMI/temp/"]
 RUN ["mkdir", "/AMI/work/"]
 
@@ -97,7 +96,6 @@ COPY bin/setenv.sh /AMI/bin/
 COPY conf/AMI.xml /AMI/conf/
 COPY conf/server.xml /AMI/conf/
 COPY conf/logging.properties /AMI/conf/
-COPY font/Serif.ttf /AMI/font/
 
 ########################################################################################################################
 

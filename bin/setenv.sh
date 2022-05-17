@@ -1,6 +1,6 @@
 ########################################################################################################################
 
-JAVA_OPTS='-server -Djava.security.egd=file:/dev/./urandom'
+JAVA_OPTS='-server -Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom'
 
 ########################################################################################################################
 
@@ -8,8 +8,6 @@ CATALINA_OPTS="\
 -Xms${JAVA_MS} \
 -Xmx${JAVA_MX} \
 -Xss${JAVA_SS} \
-\
--Djava.awt.headless=true -Dsun.java2d.fontpath=/AMI/font/ \
 \
 -Dtomcat.http_timeout='${HTTP_TIMEOUT}' \
 -Dtomcat.http_max_threads='${HTTP_MAX_THREADS}' \
