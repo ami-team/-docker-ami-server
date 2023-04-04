@@ -1,6 +1,6 @@
 ########################################################################################################################
 
-FROM amazoncorretto:11-alpine
+FROM amazoncorretto:17-alpine
 
 ########################################################################################################################
 
@@ -48,21 +48,18 @@ ENV CLASS_PATH="/AMI/cmd/"
 
 ########################################################################################################################
 
-RUN ["mkdir", "/AMI/"]
-RUN ["mkdir", "/tomcat/"]
+RUN ["apk", "add", "--update", "--no-cache", "bash", "curl", "openssl"]
 
 ########################################################################################################################
 
-RUN wget -qO- https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.7/bin/apache-tomcat-10.1.7.tar.gz | tar xz -C /tomcat/ --strip-components 1
+RUN ["wget", "-O", "AMI-bundle.zip", "https://repo.ami-ecosystem.in2p3.fr/releases/net/hep/ami/AMICoreWeb/1.0.0/AMICoreWeb-1.0.0-bundle.zip"]
+RUN ["unzip", "AMI-bundle.zip"]
+RUN ["rm", "AMI-bundle.zip"]
 
 ########################################################################################################################
 
-RUN ["mkdir", "/AMI/app/"]
-RUN ["mkdir", "/AMI/bin/"]
-RUN ["mkdir", "/AMI/cmd/"]
-RUN ["mkdir", "/AMI/conf/"]
-RUN ["mkdir", "/AMI/temp/"]
-RUN ["mkdir", "/AMI/work/"]
+RUN ["mkdir", "-p", "/AMI/temp/"]
+RUN ["mkdir", "-p", "/AMI/work/"]
 
 ########################################################################################################################
 
@@ -70,35 +67,13 @@ RUN ["chmod", "777", "/AMI/temp/", "/AMI/work/"]
 
 ########################################################################################################################
 
-RUN ["wget", "-O", "/AMI/app/AMI.war", "https://repo.ami-ecosystem.in2p3.fr/releases/net/hep/ami/AMICoreWeb/1.0.0/AMICoreWeb-1.0.0.war"]
+COPY docker-entrypoint.sh /docker-entrypoint.sh
+
+RUN ["chmod", "a+x", "/docker-entrypoint.sh"]
 
 ########################################################################################################################
 
-RUN ["mv", "/tomcat/bin/catalina.sh", "/AMI/bin/"]
-RUN ["mv", "/tomcat/bin/bootstrap.jar", "/AMI/bin/"]
-RUN ["mv", "/tomcat/bin/setclasspath.sh", "/AMI/bin/"]
-RUN ["mv", "/tomcat/bin/tomcat-juli.jar", "/AMI/bin/"]
-
-RUN ["mv", "/tomcat/conf/catalina.policy", "/AMI/conf/"]
-RUN ["mv", "/tomcat/conf/catalina.properties", "/AMI/conf/"]
-RUN ["mv", "/tomcat/conf/context.xml", "/AMI/conf/"]
-RUN ["mv", "/tomcat/conf/web.xml", "/AMI/conf/"]
-
-RUN ["mv", "/tomcat/lib/", "/AMI/lib/"]
-
-RUN ["mv", "/tomcat/LICENSE", "/AMI/"]
-
-RUN ["rm", "-fr", "/tomcat/"]
-
-########################################################################################################################
-
-COPY bin/setenv.sh /AMI/bin/
-COPY conf/AMI.xml /AMI/conf/
-COPY conf/server.xml /AMI/conf/
-COPY conf/logging.properties /AMI/conf/
-
-########################################################################################################################
-
+EXPOSE 8443
 EXPOSE 8080
 EXPOSE 8009
 
@@ -112,6 +87,6 @@ WORKDIR /AMI/
 
 ########################################################################################################################
 
-ENTRYPOINT ["/AMI/bin/catalina.sh", "run"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
 
 ########################################################################################################################
