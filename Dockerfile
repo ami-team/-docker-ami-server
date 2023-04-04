@@ -53,7 +53,7 @@ RUN ["mkdir", "/tomcat/"]
 
 ########################################################################################################################
 
-RUN wget -qO- https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.22/bin/apache-tomcat-10.0.22.tar.gz | tar xz -C /tomcat/ --strip-components 1
+RUN wget -qO- https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.7/bin/apache-tomcat-10.1.7.tar.gz | tar xz -C /tomcat/ --strip-components 1
 
 ########################################################################################################################
 
