@@ -70,7 +70,7 @@ RUN ["chmod", "777", "/AMI/temp/", "/AMI/work/"]
 
 ########################################################################################################################
 
-RUN ["wget", "-O", "/AMI/app/AMI.war", "https://ami.in2p3.fr/download/AMICoreWeb-1.0.0.war"]
+RUN ["wget", "-O", "/AMI/app/AMI.war", "https://repo.ami-ecosystem.in2p3.fr/releases/net/hep/ami/AMICoreWeb/1.0.0/AMICoreWeb-1.0.0.war"]
 
 ########################################################################################################################
 
