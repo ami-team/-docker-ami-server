@@ -57,6 +57,33 @@ EOF
 
 ########################################################################################################################
 
+cat > /AMI/conf/AMI.xml << EOF
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<properties>
+    <property name="base_url"><![CDATA[\${ami.base_url}]]></property>
+
+    <property name="admin_user"><![CDATA[\${ami.admin_user}]]></property>
+    <property name="admin_pass"><![CDATA[\${ami.admin_pass}]]></property>
+    <property name="admin_email"><![CDATA[\${ami.admin_email}]]></property>
+
+    <property name="encryption_key"><![CDATA[\${ami.encryption_key}]]></property>
+    <property name="authorized_ips"><![CDATA[\${ami.authorized_ips}]]></property>
+
+    <property name="router_catalog"><![CDATA[\${ami.router_catalog}]]></property>
+    <property name="router_schema"><![CDATA[\${ami.router_schema}]]></property>
+    <property name="router_url"><![CDATA[\${ami.router_url}]]></property>
+    <property name="router_user"><![CDATA[\${ami.router_user}]]></property>
+    <property name="router_pass"><![CDATA[\${ami.router_pass}]]></property>
+
+    <property name="time_zone"><![CDATA[\${ami.time_zone}]]></property>
+
+    <property name="class_path"><![CDATA[\${ami.class_path}]]></property>
+</properties>
+EOF
+
+########################################################################################################################
+
 /AMI/bin/ami.sh run
 
 ########################################################################################################################
